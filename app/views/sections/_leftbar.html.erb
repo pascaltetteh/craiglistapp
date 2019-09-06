@@ -1,0 +1,42 @@
+<div id="leftbar">
+            <div id="logo">
+    <a href="#">CRAIGSLIST</a>
+</div>
+
+<ul id="postlks">
+		<% if user_signed_in? %>
+  <li><a href="#">Logged in as <strong><%= current_user.email %></a></strong></li>
+  <li> <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
+  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </li>
+<% else %>
+  <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
+  <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> </li>
+<% end %>
+	
+    <li><a id="post" href="https://post.craigslist.org/c/phi">create a posting</a></li>
+</ul>
+
+	
+	
+	<!--
+<form id="search" class="homepage-search" action="/search/" method="GET">
+    <input type="hidden" name="sort" value="rel">
+    <input type="hidden" name="ordinal" id="ordinal" value="1">
+    <input type="hidden" name="ratio" id="ratio" value="0">
+    <input type="hidden" name="clicked" id="clicked" value="0">
+    <input id="query" class="querybox flatinput ui-autocomplete-input" name="query" data-autocomplete="search-count" autocorrect="off" autocapitalize="off" placeholder="search craigslist" autofocus="autofocus" autocomplete="off">
+    <select id="catAbb" name="catAbb" class="homepage-category-picker">
+        <option value="" selected="selected">select category</option>
+        <option value="ccc">community</option>
+        <option value="eee">events</option>
+        <option value="ggg">gigs</option>
+        <option value="hhh">housing</option>
+        <option value="jjj">jobs</option>
+        <option value="rrr">resumes</option>
+        <option value="sss">for sale</option>
+        <option value="bbb">services</option>
+    </select>
+    <button type="submit" id="go" class="searchbtn"><span class="icon icon-search"><span class="screen-reader-text">search craigslist</span></span></button>
+</form> -->
+
+        </div>

@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @post.price %>
+</p>
+
+<p>
+  <strong>Neighbourhood:</strong>
+  <%= @post.neighbourhood %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @post.postal_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @post.phone_number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post.category_id %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @post.city_id %>
+</p>
+
+<p>
+	<% @post.pictures.each do |image| %>
+  <%= image_tag image %> <br />
+<% end %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @post.active %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
